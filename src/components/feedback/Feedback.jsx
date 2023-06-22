@@ -6,15 +6,11 @@ import { Section } from 'components/Section/Section';
 import { Notification } from 'components/Notification/Notification';
 
 export class Feedback extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    };
-  }
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   newFeedback = e => {
     const key = e.target.innerText.toLowerCase();
