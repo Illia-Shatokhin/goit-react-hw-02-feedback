@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 export const FeedbackOptions = ({ options = {}, onLeaveFeedback = {} }) => {
   return (
     <div className={css.buttonsWrap}>
-      {options.map((option, index) => {
+      {options.map(option => {
         return (
-          <button key={index} className={css.buttons} onClick={onLeaveFeedback}>
+          <button
+            key={option}
+            className={css.buttons}
+            onClick={onLeaveFeedback}
+          >
             {firstLetterToUpperCase(option)}
           </button>
         );
